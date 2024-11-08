@@ -161,6 +161,7 @@ export const createProducts= async (request, response) =>{
 export const createHello= async(request, response)=>{
   try {
     console.log("Hello World !!!!");
+    response.send('hellooooooo');
   } catch (error) {
     throw error;
   }
