@@ -13,6 +13,7 @@ import {
   HTTP_STATUS_BAD_REQUEST,
   HTTP_STATUS_SUCCESS_NO_CONTENT,
 } from '../constants/http.status.constants.js';
+import { request, response } from 'express';
 
 export async function saveProducts(productProjectionsToBeSaved) {
   logger.info(`Save ${productProjectionsToBeSaved.length} product(s)`);
@@ -152,6 +153,14 @@ export const createProducts= async (request, response) =>{
       statusCode: 200,
       body: product,
     });
+  } catch (error) {
+    throw error;
+  }
+}
+
+export const createHello= async(request, response)=>{
+  try {
+    console.log("Hello World !!!!");
   } catch (error) {
     throw error;
   }
