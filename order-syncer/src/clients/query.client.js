@@ -14,7 +14,10 @@ export async function getCartByOrderId(orderId) {
     })
     .get({ queryArgs })
     .execute()
-    .then((response) => response.body?.cart.obj)
+    .then((response) =>{
+      console.log("****************************", response)
+      return response.body?.cart
+    })
     .catch((error) => {
       throw new CustomError(HTTP_STATUS_SUCCESS_ACCEPTED, error.message, error);
     });

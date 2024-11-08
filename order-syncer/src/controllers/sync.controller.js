@@ -24,14 +24,14 @@ export const syncHandler = async (request, response) => {
       );
     }
 
-    const messageBody = decodeToJson(encodedMessageBody);
-    doValidation(messageBody);
+    // const messageBody = decodeToJson(encodedMessageBody);
+    // doValidation(messageBody);s
 
-    const orderId = messageBody?.resource?.id;
-    const cart = await getCartByOrderId(orderId);
-    if (cart) {
-      await syncToTaxProvider();
-    }
+    const orderId = encodedMessageBody?.messagebody.resource?.id;
+    return await getCartByOrderId(orderId);
+    // if (cart) {
+    //   await syncToTaxProvider();
+    // }
   } catch (err) {
     logger.error(err);
     if (err.statusCode) return response.status(err.statusCode).send(err);
