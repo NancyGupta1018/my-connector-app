@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { syncHandler, getProducts, createProducts } from '../controllers/sync.controller.js';
+import { syncHandler, getProducts, createProducts, createHello } from '../controllers/sync.controller.js';
 
 const syncRouter = Router();
 
@@ -8,7 +8,11 @@ const syncRouter = Router();
 
 // syncRouter.post('/:productId', getProducts);
 
-syncRouter.post('/', createProducts);
+// syncRouter.post('/', createProducts);
+
+syncRouter.post('/hello', createHello);
+
+
 
 
 
