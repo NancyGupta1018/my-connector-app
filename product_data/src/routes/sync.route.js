@@ -8,9 +8,9 @@ const syncRouter = Router();
 
 // syncRouter.post('/:productId', getProducts);
 
-// syncRouter.post('/', createProducts);
+syncRouter.post('/', createProducts);
 
-syncRouter.get('/hello', createHello);
+// syncRouter.get('/hello', createHello);
 
 
 
