@@ -10,7 +10,9 @@
     "prettier": "node_modules/.bin/prettier --write '**/*.{js,ts}'",
     "test": "echo Comment: It is npm command dedicated for running test in connect service",
     "test:integration": "node_modules/.bin/jest --config jest.config.cjs",
-    "test:ci": "npm run test:integration"
+    "test:ci": "npm run test:integration",
+    "connector:post-deploy": "node src/connectors/post-deploy.js",
+    "connector:pre-undeploy":"node src/connectors/pre-undeploy.js"
   },
   "author": "",
   "license": "MIT",
