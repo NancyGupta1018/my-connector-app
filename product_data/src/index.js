@@ -3,7 +3,7 @@ import 'dotenv/config';
 import express from 'express';
 import bodyParser from 'body-parser';
 
-// Import routes
+// Import routessz
 import SyncRoutes from './routes/sync.route.js';
 import { logger } from './utils/logger.utils.js';
 
