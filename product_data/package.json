@@ -1,5 +1,5 @@
 {
-  "name": "full-export",
+  "name": "product_data",
   "version": "1.0.0",
   "type": "module",
   "main": "src/index.js",

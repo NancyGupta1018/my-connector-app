@@ -1,11 +1,13 @@
 import { Router } from 'express';
 
-import { createHello } from '../controllers/sync.controller.js';
-
-const syncRouter = Router();
-
-syncRouter.get('/hello', createHello);
 
 
+import { helloworld } from '../controllers/tax.calculator.controller.js';
 
-export default syncRouter;
+const taxCalculatorRouter = Router();
+
+
+
+taxCalculatorRouter.get('/hello', helloworld);
+
+export default taxCalculatorRouter;
