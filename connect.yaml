@@ -6,7 +6,7 @@ deployAs:
       postDeploy: npm install
     configuration:
       standardConfiguration:
-        - key: CTP_REGIONss
+        - key: CTP_REGION
           description: region of commercetools composable commerce project
       securedConfiguration:
         - key: CTP_PROJECT_KEY
