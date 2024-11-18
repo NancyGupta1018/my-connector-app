@@ -10,6 +10,6 @@ import configUtils from '../utils/config.util.js';
 export const createClient = () =>
   new ClientBuilder()
     .withProjectKey(configUtils.readConfiguration().projectKey)
-    .withClientCredentialsFlow(getAuthMiddlewareOptions)
-    .withHttpMiddleware(getHttpMiddlewareOptions)
+    .withClientCredentialsFlow(getAuthMiddlewareOptions())
+    .withHttpMiddleware(getHttpMiddlewareOptions())
     .build();
