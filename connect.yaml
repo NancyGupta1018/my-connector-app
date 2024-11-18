@@ -1,10 +1,9 @@
 deployAs:
   - name: product_data
-    applicationType: event
-    endpoint: /productData
+    applicationType: service
+    endpoint: /hello
     scripts:
-      postDeploy: npm install && npm run connector:post-deploy
-      preUndeploy: npm install && npm run connector:pre-undeploy
+      postDeploy: npm install
     configuration:
       standardConfiguration:
         - key: CTP_REGION
